@@ -1,0 +1,25 @@
+Database connectivity:
+---------------------
+flask framework is used to develop microservices
+django is large framework
+SQLite 3
+SQL
+
+Big Data frameworks includes:
+-----------------------------
+Hadoob, spark
+
+Learn Data visualisation tool:
+------------------------------
+Tablo
+Power BI
+
+Database
+------------
+Post Grace
+DBMS
+Database creation
+
+
+JUP
+

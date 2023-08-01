@@ -1,0 +1,73 @@
+Class 6 dated 16-07-2023
+
+NLP
+-----
+OLD algorithm is similarity based classification, 
+Today's algorithm based on contextual basis e.g bird algorithm is best
+Voice to text, text to voice, NLP best example is Chat GPT 4
+PROMPT ENGINEER, FINE TUNE COURSE ARE MUST FROM DEEPLEARNING.AI
+
+Active learning: After model pridiction data, human validate prediction mark true/false is call Active learning. Active learning pipeline should be well versed by us
+
+Various Techniques to useConvert text to number:
+1. vectorisation
+
+Sentiment Analsyis on Kaggle dataset
+
+spacy, nltk are nlp packages most widely used packages
+
+NER (Name, entity, recongnition)
+
+Tehcniques:
+unidecode
+nltk
+nltk.corpus (All vocablaries for data you are using)
+stopwords (purpose not relates to context) e.g, is, am, are, the //remove these words. Stopwords are different according to the languarage
+Tokenize (assign no. to each word) means word boundary for e.g breast cancer three words combine together to give same meaning. Domain expert can build tokenizer
+Lemmatizer: convert any word into its root word e.g cats root word is cat, verb 1st,2nd or third form action is same etc. Stemming is same
+Speller: auto correct word
+
+Run in colab
+first we need to analyse data, read atlease 1000 triles
+
+Lemmatization
+import nltk
+wordnet is corpus/dataset for general purpose
+
+Create Virtual environmnet
+-------------------
+python -m venv abc
+
+pip freez > requirement.txt (get all installed packages name in requirement.txt 
+
+Vectorisation techniques:
+--------------------------
+1. Word Embedding (word clustering): for e.g gender specific word like man, male, king, 
+   best technique
+
+ 2. tf-idf (explore by ourself)
+
+ 3. N-Gram technique 
+ 4. 
+	
+Chat gpt (generative pretrain transform)
+
+Assignment:
+-----------
+after converting data into tensor then pass on to classifier for eg. svm, decsion tree etc
+
+Preprocessing is our responsibility
+Recurrent Neural network(RNN) use for sequential data (sequence of words, text)
+Conv2D use for Computer vission
+Con1D algorithm use to train textual data
+
+Textual data processing techniques:
+-----------------------------------
+RNN is initial
+LSTM
+GRU
+Transformer 
+bird transformer
+
+
+Sentiment analysis means negative or positive reviews (binary classification)

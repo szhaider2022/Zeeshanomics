@@ -1,0 +1,67 @@
+LLM:
+------
+lang chan
+Chat GPT 4
+Super AGI
+Baby AGI
+
+On demand
+deeplearning.ai
+
+Chapter 5 to be completed by Today
+In amnist dataset there are 1000 classes like cat, dog, car etc
+
+Fine tune, transfer learning
+
+LLM namely falcon take 7 mn parameters to load requird 36gb ram normally not available in local machine
+
+
+
+ikn +b=parameter value
+
+Dropout only applies during training
+
+Optimisation
+Generalisation (unseen data)
+
+If there is no data than use synthetic data to build pipeline(make two row data and start working)
+
+Transfer learning:
+------------------
+Feature extraction
+Fine tuning
+
+VGG16 is an architechture
+VGG19 is also an architecture
+
+Imagenet is an amazon dataset which has 1.5 mn images with 1000 classes
+falcon is an open source by hugging community
+
+last layer shape matter if we talk about feature extraction 
+VGG16 layeer
+
+Object detechtion task:
+Yolo V5 colab, get 1 min vedio and then apply then goto colab
+vgg 19 same task of class
+run visualisation code on colab at home
+image segmentation
+see vedios of deeplearning.ai
+share on linkedin
+learn prompt engineering course (andreu nj course deep learning)
+chat gpt4 api key/ prodigy
+past key on dotenv file
+environment variable: whole system this variable available, access from anywhere
+//sensitive information kept in env file and hide
+import os
+from dotenv import load_dotenv
+ChatGPT Prompt Engineering for developers (learn deeplearning.ai)
+Chapter 8 is important
+load_dotenv()
+True
+
+Annotation:
+NER (NAME ENTITY RECOGNITION)
+for labeling
+
+
+Feature map and filter is use viseversa

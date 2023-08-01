@@ -1,0 +1,46 @@
+1- Create virtual environment using conda
+      conda create -n myvenv python=3
+OR 
+   pip install virtualvenv
+   virtualvenv myenv
+
+2- Activate Virtual Environment using conda
+     conda activate myvenv
+  OR 
+     .\myenv\Scripts\activate
+
+
+3- Deactivate Virtual Environment using conda
+     conda deactivate
+    OR 
+    deactivate myvenv
+
+
+4- Deleting virtual en
+   conda env remove -n myvenv
+
+  OR
+	poetry env remove myvenv
+
+
+5- listing all environments
+    conda env list
+    or conda info --envs
+
+
+
+python -m pip install django
+
+python -m django --version
+
+
+
+
+
+
+
+
+
+
+
+

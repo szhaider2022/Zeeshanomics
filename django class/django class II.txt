@@ -1,0 +1,122 @@
+Django class 2
+---------------
+
+1st we need to create folder namely Template where manage.py file is exist
+then create html files e.g index.html and so on to create various pages
+
+press shift+! in index.html page, vscode will automatically add default tags in the page
+
+we need to go settings.py and go to 'DIRS': ['templates'] 
+instead of return html tags in views.home method, we use render in return statement
+return render(request,"index.html")
+
+In django, mvt, m =model, v=url, t=views
+
+How to create links to move from 1 page to another without typing in url
+
+go to url: getboootstrap.com/docs/4.5/getting-started
+search navigation
+copy code and then paste on index.html
+
+<!--Navigation Bar Code-->
+
+past code in body
+
+<!--Navigation Bar Ends-->
+
+cdn -- content delivery network
+add cdn code from bootstrap to above title tag in index.html file
+
+
+we need to send data in index.html in the form of dictionairy only
+
+def home(request):
+
+	data = {'class': 'django'}
+	return render(request, "index.html", data)
+
+In html, python code will be executed with following syntex
+{{ class }}  // we have to pass key namely class in curly brakets then page will diplay django(the key' value)
+
+name=input("enter your name")
+rollnumber=input("enter your roll number")
+data = {'name':, roll}
+once we run the page then we go onto console to enter name and roll number and then console return response to the page
+
+
+We code on our server and then we see response on Postman and we will not use front end
+
+we only write views, url and we not usually use html pages while writing progrma in python
+
+New Application Project
+------------------------
+
+command to activate virtual environment through VS Code terminal:
+----------------------------------------------------------------
+copy virtual environment directory
+Scripts\Activate
+install django in new project
+python manage.py runserver
+
+create views.py file in project
+create template forlder where manage.py file is exist
+go to setting and add template DIRS: ['templates']
+create index.html file in template folrder
+go to url and add empty route:
+from . import views
+urlpatterns=[
+path('', views.index,name='index')
+
+go to view file:
+
+def index(request):
+	request render (request, "index.html")
+
+go to index.html:
+shift! 
+add form using form tags
+<form action="/">  #we tell action what to perform '/' for empty page   
+	<textarea name="" id="" cols="20" rows="15"> ResultSCREEN
+	
+	</textarea>
+
+runserver
+add some more actions like:
+<br>
+<input type="text" name="num1" id="">  #num1 is a variable name that store input at webpage
+<br>
+<input type="text" name="num2" id=""> 
+
+<input type="submit" value="Add" name="operator">  #operator is a container (any one ve action store either add/substract/divide etc
+<input type="submit" value="Add" name="operator">
+<input type="submit" value="Subtract" name="operator">
+<input type="submit" value="Multiply" name="operator">
+<input type="submit" value="Divide" name="operator">
+ 
+to view data on debug mode, we write print (request) in view index method
+def index(request):
+ print(request)
+ return render(request,"index.html")
+
+add method attribute in forms tag (html page) below
+<form action="/" method="GET">
+  {% csrf_token%}  # csrf in form action use to secure data (unwanted hits) for not showing in url 
+
+
+to handle data sent by client in server we use get function in views.py
+def index(request):
+ num1=int(request.GET.get('num1'))
+ num2=int(request.GET.get('num2'))
+ operator=request.GET.get('operator').lower()
+ answer={'ans':None}
+ if operator == "add":
+   answer['ans']= num1+num2
+ elif operator == "subtract":
+   answer['ans']= num1-num2
+ if operator == "multiply":
+   answer['ans']= num1*num2
+  else:
+    answer['ans']= num1/num2
+   
+ 
+ return render(request,"index.html", answer)

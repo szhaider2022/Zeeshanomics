@@ -1,0 +1,12 @@
+We normalise data by dividing it from 255 to refrain the model from gradient vanishing
+Imbalance classification problem (% of fraud transaction to non fraud transaction from sample data)
+Transformer model algorithm provided 91% accuracy
+amsable learning evaluate mulitple model and establish opinion
+Drop out only apply during training 
+
+Hugging phase open source LLM name Falcon
+
+Transfer learning:
+---------------------
+Change Classifier and then Unfreez Output layer
+

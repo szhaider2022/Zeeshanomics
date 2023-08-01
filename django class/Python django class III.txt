@@ -1,0 +1,117 @@
+What is App:
+------------
+django provide scenario through which we can create App
+
+- Scalability
+- We can create multiple application in single project. 
+  We can change any application without impacting other 
+  application in a single project
+
+In this class, we can create multiple applications alongwith their URLs
+Its upto user to create single template folder for multiple application or
+single template for single application
+
+Project URLs and Application URLs
+browser URLs goes to project URLs and redirect to particular application URL
+
+To create a project, following command:
+--------------------
+django -admin startproject institute
+cd .\institute\  ---to load a project
+django -admin startapp students ---creating an app name student
+django -admin startapp teachers ---creating an app name teachers
+python manage.py startapp staff
+--- now three applications have been created so far
+
+For the time being delete two apps and keep only 1 app for understanding
+
+Go to urls.py file and go 
+urlpatterns = [
+	path('admin/', admin.site.urls),
+	path('',views.i_home, name='i_home')
+
+]
+create view file as views.py
+from django.shortcuts import render
+from jango.urls import path,include
+from .imports views
+
+def i_home(request):
+	return render(request, 'home.html')
+]
+--create templates folder
+home.html
+
+<body>
+  <h1>	Welcome to my institute home page </h1>
+....
+
+templates folder must be created on manage.py location
+In sub applications, views.py file by default available and we need to create urls.py file as below
+We need to copy urls.py file and create file urls.py in student application
+paste project urls data in urls.py in student
+
+---Now go to institute project and add following path in urlpatters
+path ('students', include('students.urls')),
+
+--Now when main project receives url request from browser then it redirect url in student application
+
+In student application, add url pattern path as:
+urlpatters = [
+	path('',views.home, name='home')
+---Now we need to code in views.py in student application 
+def home(request):
+	return render(request,"students/home.html")
+
+Project ki setting me ja kar jitney bhi apps hum banatey hen wo add karani parti hen
+INSTALLED_APPS = [....
+	'students',
+
+]
+
+if we want to add more pages in student app then make html file in templete/student folder and add this page in views.py in institute (main app) as
+
+urlpatterns=[
+... path('students/', include('students.urls'))
+
+Go to Students application urls.py and add following:
+urlpatterns = [
+	path('/about', views.about,name='about')
+
+
+Start New Application:
+-------------------------
+djangoEnv) ..> python manage.py startapp teachers
+djangoEnv) ..> python manage.py runserver
+view already present
+url file to be created. Copy url file from student and paste on teachers folder
+set url in project file as well as in teacher file
+Project file:   ->> Add url pattern as
+	urlpattern = [
+			.
+			.
+		path('teachers', include('teachers.urls')),
+	,]
+
+Teacher file:  ->> Add url pattern as	
+	urlpattern = [
+		path('',views,home,name='home')
+
+Go to view of Teachers file and define function in views
+	from django.shortcuts improt render
+	def home(request)
+		return render(request,'teachers/home.html')
+Create teachers folder in template folder on main project file:
+In teacher folder create file name home.html and add some text in html
+<body> 
+	<h1> Thi si steachers home page </h1>
+
+
+Copy student about.html and paste this file in teachers template folder
+Add view of about in teachers folder
+	def about(request)
+		return render(request,'teachers/about.html')
+Add url of abount in teachers folder in url.py
+	urlpattern = ....path('/about',views.about,name='about')
+
+

@@ -1,0 +1,47 @@
+Web Framework
+
+Framework:Python Framework
+It is a liabrary or package that help to write code easily
+
+e.g: Marriage Hall
+Guest
+Waiter (API)
+Hall Service Provider like Kitchen items preparation
+
+Our working framework is DJango
+Flask is a light framework mostly use for developing microservices APIs
+Django is a heavy framework writes the whole backend
+
+Be remember to work on various project after creating/activating virtual 
+environment to mitigate dependencies on different programing languages or same language with multiple versions
+
+How to install/create VE:
+pip anaconda
+
+after 3.4 python version there are multiple virtual environment in buildin 
+
+python -m pip install django
+To start a project
+------------------
+django-admin
+django-admin startproject
+cd startproject    //manage.py is a handler/management file that will help us to do all works
+python manage.py runserver  
+
+to run project
+
+
+VS Code 
+setting.py file is  most important in Vscode environment
+urls.py  --it is movement from 1 page to another
+
+django framework is mvt
+MVC -:>model 	view 	controller
+        db	client	routes/uls
+
+MVT -> model	view	template
+	
+
+debug mode true in VS Code settings..py
+
+For rest API we use django rest will be cover in next class
